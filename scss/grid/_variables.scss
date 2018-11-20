@@ -1,5 +1,11 @@
+$container-display: flex;
+$container-max-width: 71.25rem;
+$container-width: 100%;
+$container-padding: 0 1rem;
+
 $row-letter-spacing: -0.31rem;
 $row-text-rendering: optimizespeed;
+$row-display: -webkit-box, -webkit-flex, -ms-flexbox, flex;
 $row-flex-flow: row wrap;
 $row-flex-start: flex-start;
 $row-ms-flex-start: start;

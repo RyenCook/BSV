@@ -1,11 +1,20 @@
 @import '_variables';
 
+.container {
+    display: $container-display;
+    max-width: $container-max-width;
+    width: $container-width;
+    padding: $container-padding;
+    margin: 0 auto;
+    
+  }
+
 .row {
     letter-spacing: $row-letter-spacing;
     /* Webkit: collapse white-space between units */
     text-rendering: $row-text-rendering;
     /* Webkit: fixes text-rendering: optimizeLegibility */
-    display: -webkit-box, -webkit-flex, -ms-flexbox, flex;
+    display: $row-display;
     -webkit-flex-flow: $row-flex-flow;
     -ms-flex-flow: $row-flex-flow;
     flex-flow: $row-flex-flow;
@@ -58,11 +67,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .col-3-8,
 .col-5-8,
 .col-7-8 {
-    display: inline-block;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+    @extend .col;
 }
 
 .col-1-8 {
