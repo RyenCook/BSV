@@ -1,4 +1,4 @@
-@import '_variables';
+@import '../_variables';
 
 .container {
     display: $container-display;
@@ -11,23 +11,15 @@
 
 .row {
     letter-spacing: $row-letter-spacing;
-    /* Webkit: collapse white-space between units */
     text-rendering: $row-text-rendering;
-    /* Webkit: fixes text-rendering: optimizeLegibility */
     display: $row-display;
     -webkit-flex-flow: $row-flex-flow;
     -ms-flex-flow: $row-flex-flow;
     flex-flow: $row-flex-flow;
-    /* Prevents distributing space between rows */
     -webkit-align-content: $row-flex-start;
     -ms-flex-line-pack: $row-ms-flex-start;
     align-content: $row-flex-start;
 }
-
-/* Opera as of 12 on Windows needs word-spacing.
-   The ".opera-only" selector is used to prevent actual prefocus styling
-   and is not required in markup.
-*/
 
 .opera-only :-o-prefocus,
 .row {
@@ -40,15 +32,6 @@
     word-spacing: $col-word-spacing;
     vertical-align: $col-vertical-align;
     text-rendering: $col-text-rendering;
-}
-
-/*
-Resets the font family back to the OS/browser's default sans-serif font,
-this the same font stack that Normalize.css sets for the `body`.
-*/
-
-.row [class *="col"] {
-    font-family: sans-serif;
 }
 
 .col-1-1,
